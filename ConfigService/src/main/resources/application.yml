@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/shared           
+          # git:
+          # uri:  https://github.com/fcamadi/microservicesSpringBoot.git 
+          # if it is a private repo, username and password are needed:
+          # username: fcamadi
+          # password: <atitelovoyadecir>
+                                                     
+  profiles: 
+    active: native     
+  security:
+    user:
+      name: admin
+      password: nimda #the password which apps will use to access its configurations
+      
+      
+server:
+  port: 8888 
