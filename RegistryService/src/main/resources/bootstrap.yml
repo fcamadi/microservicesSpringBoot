@@ -1,0 +1,12 @@
+# Entrypoint for spring to know where to look for the configuration 
+spring:
+  application:
+    name: RegistryService
+  cloud:
+    config:
+      uri: http://localhost:8888           # where the config-service is running
+      fail-fast: true                      # the service will not run if it can't reach the config-service
+      username: admin                      # username of the config-service
+      password: nimda                      # password of the config-service
+    
+    
